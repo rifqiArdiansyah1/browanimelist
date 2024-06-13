@@ -1,5 +1,6 @@
 # Keperluan Yang Digunakan
-Pada project ini saya menggunakan framework Next-js
+Pada project ini saya menggunakan framework Next-js.
+
 API :
 - jikan.moe
 
