@@ -8,7 +8,9 @@ import prisma from "@/libs/prisma"
 import Image from "next/image"
 
 const Page = async ({ params: { id } }) => {
-    const anime = await getAnimeResponse(`anime/${id}`)
+    const {data, loading} = await getAnimeResponse(`anime/${id}`)
+    if(!data) return <div>No data available</div>
+    if(loading) return <div>Loading...</div>
     const user = await authUserSession()
     const collection = await prisma.collection.findFirst({
         where: { user_email: user?.email }})
