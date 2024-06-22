@@ -1,0 +1,3 @@
+[submodule "db1"]
+	path = db1
+	url = https://github.com/rifqiArdiansyah1/browanimelist.git
