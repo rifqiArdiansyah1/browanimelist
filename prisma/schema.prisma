@@ -1,9 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -16,7 +13,7 @@ datasource db {
 model Collection {
   id              Int @id @default(autoincrement())
   anime_mal_id    String
-  user_email      String  
+  user_email      String
   anime_image     String?
   anime_title     String?
 
@@ -28,6 +25,7 @@ model Comment {
   anime_mal_id    String
   user_email      String
   comment         String
-  username        String
+  username        String   
   anime_title     String
+  comment_rating  Int   
 }
